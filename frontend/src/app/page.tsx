@@ -232,7 +232,7 @@ export default function Home() {
         onProcessNewFiles={handleProcessNewFiles}
       />
 
-      <div className="credits">Chamod Wishmantha</div>
+      <div className="credits">&copy; Chamod Wishmantha</div>
 
       {metadata && (
         <TimeControls
