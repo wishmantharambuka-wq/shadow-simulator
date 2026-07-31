@@ -1,0 +1,467 @@
+{
+  "bounds": {
+    "south": 6.848997245236126,
+    "west": 79.86023289661405,
+    "north": 6.858938467584662,
+    "east": 79.8665739310693
+  },
+  "date": "2026-06-30",
+  "timeSteps": [
+    "06:00",
+    "06:15",
+    "06:30",
+    "06:45",
+    "07:00",
+    "07:15",
+    "07:30",
+    "07:45",
+    "08:00",
+    "08:15",
+    "08:30",
+    "08:45",
+    "09:00",
+    "09:15",
+    "09:30",
+    "09:45",
+    "10:00",
+    "10:15",
+    "10:30",
+    "10:45",
+    "11:00",
+    "11:15",
+    "11:30",
+    "11:45",
+    "12:00",
+    "12:15",
+    "12:30",
+    "12:45",
+    "13:00",
+    "13:15",
+    "13:30",
+    "13:45",
+    "14:00",
+    "14:15",
+    "14:30",
+    "14:45",
+    "15:00",
+    "15:15",
+    "15:30",
+    "15:45",
+    "16:00",
+    "16:15",
+    "16:30",
+    "16:45",
+    "17:00",
+    "17:15",
+    "17:30",
+    "17:45",
+    "18:00",
+    "18:15"
+  ],
+  "layers": {
+    "ground": [
+      {
+        "time": "06:00",
+        "file": "data/ground/ground_0600.png"
+      },
+      {
+        "time": "06:15",
+        "file": "data/ground/ground_0615.png"
+      },
+      {
+        "time": "06:30",
+        "file": "data/ground/ground_0630.png"
+      },
+      {
+        "time": "06:45",
+        "file": "data/ground/ground_0645.png"
+      },
+      {
+        "time": "07:00",
+        "file": "data/ground/ground_0700.png"
+      },
+      {
+        "time": "07:15",
+        "file": "data/ground/ground_0715.png"
+      },
+      {
+        "time": "07:30",
+        "file": "data/ground/ground_0730.png"
+      },
+      {
+        "time": "07:45",
+        "file": "data/ground/ground_0745.png"
+      },
+      {
+        "time": "08:00",
+        "file": "data/ground/ground_0800.png"
+      },
+      {
+        "time": "08:15",
+        "file": "data/ground/ground_0815.png"
+      },
+      {
+        "time": "08:30",
+        "file": "data/ground/ground_0830.png"
+      },
+      {
+        "time": "08:45",
+        "file": "data/ground/ground_0845.png"
+      },
+      {
+        "time": "09:00",
+        "file": "data/ground/ground_0900.png"
+      },
+      {
+        "time": "09:15",
+        "file": "data/ground/ground_0915.png"
+      },
+      {
+        "time": "09:30",
+        "file": "data/ground/ground_0930.png"
+      },
+      {
+        "time": "09:45",
+        "file": "data/ground/ground_0945.png"
+      },
+      {
+        "time": "10:00",
+        "file": "data/ground/ground_1000.png"
+      },
+      {
+        "time": "10:15",
+        "file": "data/ground/ground_1015.png"
+      },
+      {
+        "time": "10:30",
+        "file": "data/ground/ground_1030.png"
+      },
+      {
+        "time": "10:45",
+        "file": "data/ground/ground_1045.png"
+      },
+      {
+        "time": "11:00",
+        "file": "data/ground/ground_1100.png"
+      },
+      {
+        "time": "11:15",
+        "file": "data/ground/ground_1115.png"
+      },
+      {
+        "time": "11:30",
+        "file": "data/ground/ground_1130.png"
+      },
+      {
+        "time": "11:45",
+        "file": "data/ground/ground_1145.png"
+      },
+      {
+        "time": "12:00",
+        "file": "data/ground/ground_1200.png"
+      },
+      {
+        "time": "12:15",
+        "file": "data/ground/ground_1215.png"
+      },
+      {
+        "time": "12:30",
+        "file": "data/ground/ground_1230.png"
+      },
+      {
+        "time": "12:45",
+        "file": "data/ground/ground_1245.png"
+      },
+      {
+        "time": "13:00",
+        "file": "data/ground/ground_1300.png"
+      },
+      {
+        "time": "13:15",
+        "file": "data/ground/ground_1315.png"
+      },
+      {
+        "time": "13:30",
+        "file": "data/ground/ground_1330.png"
+      },
+      {
+        "time": "13:45",
+        "file": "data/ground/ground_1345.png"
+      },
+      {
+        "time": "14:00",
+        "file": "data/ground/ground_1400.png"
+      },
+      {
+        "time": "14:15",
+        "file": "data/ground/ground_1415.png"
+      },
+      {
+        "time": "14:30",
+        "file": "data/ground/ground_1430.png"
+      },
+      {
+        "time": "14:45",
+        "file": "data/ground/ground_1445.png"
+      },
+      {
+        "time": "15:00",
+        "file": "data/ground/ground_1500.png"
+      },
+      {
+        "time": "15:15",
+        "file": "data/ground/ground_1515.png"
+      },
+      {
+        "time": "15:30",
+        "file": "data/ground/ground_1530.png"
+      },
+      {
+        "time": "15:45",
+        "file": "data/ground/ground_1545.png"
+      },
+      {
+        "time": "16:00",
+        "file": "data/ground/ground_1600.png"
+      },
+      {
+        "time": "16:15",
+        "file": "data/ground/ground_1615.png"
+      },
+      {
+        "time": "16:30",
+        "file": "data/ground/ground_1630.png"
+      },
+      {
+        "time": "16:45",
+        "file": "data/ground/ground_1645.png"
+      },
+      {
+        "time": "17:00",
+        "file": "data/ground/ground_1700.png"
+      },
+      {
+        "time": "17:15",
+        "file": "data/ground/ground_1715.png"
+      },
+      {
+        "time": "17:30",
+        "file": "data/ground/ground_1730.png"
+      },
+      {
+        "time": "17:45",
+        "file": "data/ground/ground_1745.png"
+      },
+      {
+        "time": "18:00",
+        "file": "data/ground/ground_1800.png"
+      },
+      {
+        "time": "18:15",
+        "file": "data/ground/ground_1815.png"
+      }
+    ],
+    "facade": [
+      {
+        "time": "06:00",
+        "file": "data/facade/facade_0600.png"
+      },
+      {
+        "time": "06:15",
+        "file": "data/facade/facade_0615.png"
+      },
+      {
+        "time": "06:30",
+        "file": "data/facade/facade_0630.png"
+      },
+      {
+        "time": "06:45",
+        "file": "data/facade/facade_0645.png"
+      },
+      {
+        "time": "07:00",
+        "file": "data/facade/facade_0700.png"
+      },
+      {
+        "time": "07:15",
+        "file": "data/facade/facade_0715.png"
+      },
+      {
+        "time": "07:30",
+        "file": "data/facade/facade_0730.png"
+      },
+      {
+        "time": "07:45",
+        "file": "data/facade/facade_0745.png"
+      },
+      {
+        "time": "08:00",
+        "file": "data/facade/facade_0800.png"
+      },
+      {
+        "time": "08:15",
+        "file": "data/facade/facade_0815.png"
+      },
+      {
+        "time": "08:30",
+        "file": "data/facade/facade_0830.png"
+      },
+      {
+        "time": "08:45",
+        "file": "data/facade/facade_0845.png"
+      },
+      {
+        "time": "09:00",
+        "file": "data/facade/facade_0900.png"
+      },
+      {
+        "time": "09:15",
+        "file": "data/facade/facade_0915.png"
+      },
+      {
+        "time": "09:30",
+        "file": "data/facade/facade_0930.png"
+      },
+      {
+        "time": "09:45",
+        "file": "data/facade/facade_0945.png"
+      },
+      {
+        "time": "10:00",
+        "file": "data/facade/facade_1000.png"
+      },
+      {
+        "time": "10:15",
+        "file": "data/facade/facade_1015.png"
+      },
+      {
+        "time": "10:30",
+        "file": "data/facade/facade_1030.png"
+      },
+      {
+        "time": "10:45",
+        "file": "data/facade/facade_1045.png"
+      },
+      {
+        "time": "11:00",
+        "file": "data/facade/facade_1100.png"
+      },
+      {
+        "time": "11:15",
+        "file": "data/facade/facade_1115.png"
+      },
+      {
+        "time": "11:30",
+        "file": "data/facade/facade_1130.png"
+      },
+      {
+        "time": "11:45",
+        "file": "data/facade/facade_1145.png"
+      },
+      {
+        "time": "12:00",
+        "file": "data/facade/facade_1200.png"
+      },
+      {
+        "time": "12:15",
+        "file": "data/facade/facade_1215.png"
+      },
+      {
+        "time": "12:30",
+        "file": "data/facade/facade_1230.png"
+      },
+      {
+        "time": "12:45",
+        "file": "data/facade/facade_1245.png"
+      },
+      {
+        "time": "13:00",
+        "file": "data/facade/facade_1300.png"
+      },
+      {
+        "time": "13:15",
+        "file": "data/facade/facade_1315.png"
+      },
+      {
+        "time": "13:30",
+        "file": "data/facade/facade_1330.png"
+      },
+      {
+        "time": "13:45",
+        "file": "data/facade/facade_1345.png"
+      },
+      {
+        "time": "14:00",
+        "file": "data/facade/facade_1400.png"
+      },
+      {
+        "time": "14:15",
+        "file": "data/facade/facade_1415.png"
+      },
+      {
+        "time": "14:30",
+        "file": "data/facade/facade_1430.png"
+      },
+      {
+        "time": "14:45",
+        "file": "data/facade/facade_1445.png"
+      },
+      {
+        "time": "15:00",
+        "file": "data/facade/facade_1500.png"
+      },
+      {
+        "time": "15:15",
+        "file": "data/facade/facade_1515.png"
+      },
+      {
+        "time": "15:30",
+        "file": "data/facade/facade_1530.png"
+      },
+      {
+        "time": "15:45",
+        "file": "data/facade/facade_1545.png"
+      },
+      {
+        "time": "16:00",
+        "file": "data/facade/facade_1600.png"
+      },
+      {
+        "time": "16:15",
+        "file": "data/facade/facade_1615.png"
+      },
+      {
+        "time": "16:30",
+        "file": "data/facade/facade_1630.png"
+      },
+      {
+        "time": "16:45",
+        "file": "data/facade/facade_1645.png"
+      },
+      {
+        "time": "17:00",
+        "file": "data/facade/facade_1700.png"
+      },
+      {
+        "time": "17:15",
+        "file": "data/facade/facade_1715.png"
+      },
+      {
+        "time": "17:30",
+        "file": "data/facade/facade_1730.png"
+      },
+      {
+        "time": "17:45",
+        "file": "data/facade/facade_1745.png"
+      },
+      {
+        "time": "18:00",
+        "file": "data/facade/facade_1800.png"
+      },
+      {
+        "time": "18:15",
+        "file": "data/facade/facade_1815.png"
+      }
+    ]
+  }
+}

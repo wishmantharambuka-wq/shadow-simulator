@@ -1,0 +1,17 @@
+# Node
+node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
