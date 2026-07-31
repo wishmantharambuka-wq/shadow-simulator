@@ -50,35 +50,62 @@ html, body {
   box-shadow: var(--panel-shadow);
 }
 
-/* ── Controls wrapper ───────────────────────────────── */
+/* ── Title bar (top-left) ───────────────────────────── */
 
-.controls-wrapper {
+.title-bar {
   position: absolute;
-  bottom: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 14px 22px;
+}
+
+.title-bar h1 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.title-bar h1 span {
+  color: var(--green);
+}
+
+.title-bar p {
+  font-size: 12px;
+  color: var(--ash);
+  margin-top: 4px;
+}
+
+/* ══════════════════════════════════════════════════════
+   PLAYBACK BAR — bottom center
+   ══════════════════════════════════════════════════════ */
+
+.playback-bar {
+  position: absolute;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: min(760px, calc(100% - 48px));
+  width: min(700px, calc(100% - 48px));
 }
 
-.controls-inner {
-  padding: 20px 28px 24px;
+.playback-inner {
+  padding: 16px 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.playback-left {
+  flex-shrink: 0;
+}
+
+.playback-center {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-
-.controls-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  gap: 10px;
+  min-width: 0;
 }
 
 .time-display {
@@ -87,12 +114,14 @@ html, body {
   letter-spacing: 1px;
   color: var(--blue);
   font-variant-numeric: tabular-nums;
+  line-height: 1.1;
 }
 
 .date-label {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--ash);
   font-weight: 500;
+  margin-top: 2px;
 }
 
 /* ── Slider ─────────────────────────────────────────── */
@@ -100,14 +129,14 @@ html, body {
 .slider-row {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .time-slider {
   flex: 1;
   -webkit-appearance: none;
   appearance: none;
-  height: 6px;
+  height: 5px;
   border-radius: 3px;
   background: rgba(169, 176, 176, 0.2);
   outline: none;
@@ -117,8 +146,8 @@ html, body {
 .time-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--blue);
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -133,8 +162,8 @@ html, body {
 }
 
 .time-slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--blue);
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -143,33 +172,33 @@ html, body {
 }
 
 .slider-label {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--ash);
-  min-width: 40px;
+  min-width: 36px;
   text-align: center;
   font-variant-numeric: tabular-nums;
 }
 
-/* ── Buttons row ────────────────────────────────────── */
+/* ── Playback buttons ───────────────────────────────── */
 
 .btn-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .ctrl-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   border: 1px solid var(--panel-border);
   background: rgba(255, 255, 255, 0.06);
   color: #e0e4e8;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   transition: all 0.2s ease;
 }
 
@@ -178,20 +207,14 @@ html, body {
   border-color: var(--blue);
 }
 
-.ctrl-btn.active {
-  background: rgba(30, 144, 255, 0.2);
-  border-color: var(--blue);
-  color: var(--blue);
-}
-
 .ctrl-btn.play-btn {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--green), #1e8449);
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   box-shadow: 0 4px 16px rgba(39, 174, 96, 0.4);
 }
 
@@ -208,8 +231,6 @@ html, body {
 .ctrl-btn.play-btn.playing:hover {
   box-shadow: 0 6px 24px rgba(255, 122, 24, 0.6);
 }
-
-/* ── Speed ──────────────────────────────────────────── */
 
 .speed-label {
   font-size: 12px;
@@ -236,74 +257,117 @@ html, body {
   background: rgba(255, 122, 24, 0.25);
 }
 
-/* ── Layer toggles ──────────────────────────────────── */
+/* ══════════════════════════════════════════════════════
+   SETTINGS PANEL — right side
+   ══════════════════════════════════════════════════════ */
 
-.layer-toggles {
-  display: flex;
-  gap: 8px;
+.settings-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 18px 20px;
+  width: 220px;
 }
 
-.layer-btn {
+.settings-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #e0e4e8;
+  letter-spacing: 0.3px;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-section-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--ash);
+}
+
+.settings-divider {
+  height: 1px;
+  background: var(--panel-border);
+  margin: 12px 0;
+}
+
+/* ── Toggle switch rows ─────────────────────────────── */
+
+.toggle-row {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--panel-border);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--ash);
+  justify-content: space-between;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  padding: 4px 0;
 }
 
-.layer-btn.active {
-  border-color: var(--green);
-  color: var(--green);
-  background: rgba(39, 174, 96, 0.12);
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #e0e4e8;
+  user-select: none;
 }
 
-.layer-btn .dot {
+.toggle-label .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-/* ── Map toggles (base map on/off, dark/light) ──────── */
-
-.map-toggles {
-  display: flex;
-  gap: 6px;
+.toggle-switch {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--panel-border);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
 }
 
-.map-toggle-btn {
+.toggle-switch.on {
+  background: rgba(39, 174, 96, 0.35);
+  border-color: var(--green);
+}
+
+.toggle-switch.mode-switch.on {
+  background: rgba(30, 144, 255, 0.3);
+  border-color: var(--blue);
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ash);
+  transition: all 0.25s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  border: 1px solid var(--panel-border);
-  background: rgba(255, 255, 255, 0.04);
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.2s ease;
+  font-size: 9px;
+  line-height: 1;
 }
 
-.map-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--blue);
+.toggle-switch.on .toggle-knob {
+  left: 20px;
+  background: var(--green);
 }
 
-.map-toggle-btn.active {
-  border-color: var(--blue);
-  background: rgba(30, 144, 255, 0.12);
-}
-
-.map-toggle-btn.light-active {
-  border-color: var(--orange);
-  background: rgba(255, 122, 24, 0.12);
+.toggle-switch.mode-switch.on .toggle-knob {
+  background: var(--blue);
 }
 
 /* ── Process / Reload button ────────────────────────── */
@@ -311,6 +375,7 @@ html, body {
 .process-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 8px 16px;
   border-radius: 10px;
@@ -322,6 +387,10 @@ html, body {
   font-weight: 600;
   transition: all 0.2s ease;
   white-space: nowrap;
+}
+
+.process-btn.full-width {
+  width: 100%;
 }
 
 .process-btn:hover:not(:disabled) {
@@ -348,63 +417,6 @@ html, body {
   border-top-color: var(--orange);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
-}
-
-/* ── Title bar ──────────────────────────────────────── */
-
-.title-bar {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  padding: 14px 22px;
-}
-
-.title-bar h1 {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.title-bar h1 span {
-  color: var(--green);
-}
-
-.title-bar p {
-  font-size: 12px;
-  color: var(--ash);
-  margin-top: 4px;
-}
-
-/* ── Legend panel ───────────────────────────────────── */
-
-.legend-panel {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  padding: 14px 18px;
-}
-
-.legend-panel h3 {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--ash);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-  font-size: 12px;
-}
-
-.legend-swatch {
-  width: 20px;
-  height: 12px;
-  border-radius: 3px;
 }
 
 /* ── Loading overlay ────────────────────────────────── */

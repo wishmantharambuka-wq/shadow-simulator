@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import TimeControls from "@/components/TimeControls";
+import SettingsPanel from "@/components/SettingsPanel";
 
 const ShadowMap = dynamic(() => import("@/components/ShadowMap"), {
   ssr: false,
@@ -218,20 +219,18 @@ export default function Home() {
         <p>Dehiwala Urban Shadow Analysis</p>
       </div>
 
-      <div className="legend-panel glass-panel">
-        <h3>Legend</h3>
-        <div className="legend-item">
-          <div className="legend-swatch" style={{ background: "rgba(30,30,30,0.7)" }} />
-          <span>Ground Shadow</span>
-        </div>
-        <div className="legend-item">
-          <div
-            className="legend-swatch"
-            style={{ background: "linear-gradient(90deg, #FF7A18, #C8320A)" }}
-          />
-          <span>Facade Shadow</span>
-        </div>
-      </div>
+      <SettingsPanel
+        showGround={showGround}
+        showFacade={showFacade}
+        showBaseMap={showBaseMap}
+        darkMode={darkMode}
+        isProcessing={isProcessing}
+        onToggleGround={() => setShowGround((v) => !v)}
+        onToggleFacade={() => setShowFacade((v) => !v)}
+        onToggleBaseMap={() => setShowBaseMap((v) => !v)}
+        onToggleDarkMode={() => setDarkMode((v) => !v)}
+        onProcessNewFiles={handleProcessNewFiles}
+      />
 
       {metadata && (
         <TimeControls
@@ -241,21 +240,11 @@ export default function Home() {
           isPlaying={isPlaying}
           speed={speed}
           date={metadata.date}
-          showGround={showGround}
-          showFacade={showFacade}
-          showBaseMap={showBaseMap}
-          darkMode={darkMode}
-          isProcessing={isProcessing}
           onProgressChange={handleProgressChange}
           onTogglePlay={handleTogglePlay}
           onSpeedChange={setSpeed}
           onStepBack={handleStepBack}
           onStepForward={handleStepForward}
-          onToggleGround={() => setShowGround((v) => !v)}
-          onToggleFacade={() => setShowFacade((v) => !v)}
-          onToggleBaseMap={() => setShowBaseMap((v) => !v)}
-          onToggleDarkMode={() => setDarkMode((v) => !v)}
-          onProcessNewFiles={handleProcessNewFiles}
         />
       )}
     </div>
