@@ -86,14 +86,14 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: min(700px, calc(100% - 48px));
+  width: min(640px, calc(100% - 48px));
 }
 
 .playback-inner {
-  padding: 16px 24px 20px;
+  padding: 12px 20px 14px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .playback-left {
@@ -104,12 +104,12 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
 }
 
 .time-display {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--blue);
@@ -118,10 +118,10 @@ html, body {
 }
 
 .date-label {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--ash);
   font-weight: 500;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 /* ── Slider ─────────────────────────────────────────── */
@@ -191,8 +191,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 10px;
   border: 1px solid var(--panel-border);
   background: rgba(255, 255, 255, 0.06);
@@ -208,8 +208,8 @@ html, body {
 }
 
 .ctrl-btn.play-btn {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--green), #1e8449);
   border: none;
