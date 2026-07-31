@@ -451,3 +451,17 @@ html, body {
   color: var(--ash);
   font-size: 14px;
 }
+
+/* ── Credits ────────────────────────────────────────── */
+
+.credits {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  z-index: 1000;
+  font-size: 9px;
+  color: rgba(169, 176, 176, 0.4);
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  user-select: none;
+}

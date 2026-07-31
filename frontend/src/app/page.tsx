@@ -232,6 +232,8 @@ export default function Home() {
         onProcessNewFiles={handleProcessNewFiles}
       />
 
+      <div className="credits">Chamod Wishmantha</div>
+
       {metadata && (
         <TimeControls
           timeSteps={metadata.timeSteps}
